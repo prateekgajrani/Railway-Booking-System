@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+  <body>
+    {{> navbar}}
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-trains-tab" data-toggle="tab" href="#nav-trains" role="tab" aria-controls="nav-trains" aria-selected="true">Trains List</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade registerTrain show active" id="nav-trains" role="tabpanel" aria-labelledby="nav-trains">
+            <div id="accordion">
+                <div class="row">
+                {{{trainsList}}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+    <script src="../js/custom.js"></script>
+  </body>
+</html>

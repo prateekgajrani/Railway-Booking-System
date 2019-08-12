@@ -1,0 +1,17 @@
+{
+  "available": {
+    "bogies": "100",
+    "engines": [
+      "Express",
+      "Superfast",
+      "Passenger"
+    ],
+    "motorman": [
+      "Nikhil Khandelwal",
+      "Bharat Agnihotri",
+      "Bharat Agnihotri",
+      "Sukhvindar Singh"
+    ]
+  },
+  "taken": []
+}

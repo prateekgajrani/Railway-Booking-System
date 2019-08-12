@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+  <body>
+    {{> navbar}}
+    <div class="pnrstatus h-100 row align-items-center">
+        <input class="form-control" id="ticketpnr" type="text" placeholder="Enter PNR" aria-label="Search">
+        <br><br>
+        <button id="pnrStatus" type="button" class="btn btn-primary">Check Status</button>
+    </div>
+    {{> footer}}
+    <script src="../js/custom.js"></script>
+  </body>
+</html>

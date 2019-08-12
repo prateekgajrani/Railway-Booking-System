@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+  <body>
+    {{> navbar}}
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-trains-tab" data-toggle="tab" href="#nav-trains" role="tab" aria-controls="nav-trains" aria-selected="true">Trains List</a>
+            <a class="nav-item nav-link" id="nav-register-train-tab" data-toggle="tab" href="#nav-register-train" role="tab" aria-controls="nav-register-train" aria-selected="false">Register Train</a>
+            <a class="nav-item nav-link" id="nav-pnr-list-tab" data-toggle="tab" href="#nav-pnr-list" role="tab" aria-controls="nav-pnr-list" aria-selected="false">PNR List</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade registerTrain" id="nav-register-train" role="tabpanel" aria-labelledby="nav-register-train">
+            <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="form-control" id="trainName" placeholder="Enter Train Name">
+            </div>
+            <div class="form-group">
+                <label for="trainNo">Train Number</label>
+                <input type="text" class="form-control" id="trainNo" placeholder="Enter Train Number">
+            </div>
+            <div class="form-group">
+                <label for="motormanList">Motorman</label>
+                <select class="form-control" id="motorman">
+                    {{{motormanList}}}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bogies">Bogies (Available - {{bogiesAvailable}})</label>
+                <input class="form-control" id="bogies">
+            </div>
+            <div class="form-group">
+                <label for="engine">Engine</label>
+                <select class="form-control" id="engine">
+                    {{{enginesAvailable}}}
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="form-control btn btn-success" id="registerTrain" type="submit">Submit</button>
+            </div>
+        </div>
+        <div class="tab-pane fade registerTrain show active" id="nav-trains" role="tabpanel" aria-labelledby="nav-trains">
+            <div id="accordion">
+                <div class="row">
+                {{{trainsList}}}
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade registerTrain" id="nav-pnr-list" role="tabpanel" aria-labelledby="nav-pnr-list">
+            <div id="accordion">
+                <div class="row">
+                {{{pnrList}}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="trainRegisterSuccess" class="hidden alert alert-success" role="alert">Train Added Successfully</div>
+    <div id="trainRegisterFail" class="hidden alert alert-danger" role="alert">Train already Exist</div>
+    {{> footer}}
+    <script src="../js/custom.js"></script>
+  </body>
+</html>

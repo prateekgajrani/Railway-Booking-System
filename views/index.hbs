@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+  <body>
+    {{> navbar}}
+
+    <div class="row">
+        <div class="card">
+            <img class="card-img-top" src="../images/train.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Ticket Booking</h5>
+                <p class="card-text">Book Your Ticket</p>
+                <a href="/checkAvailability" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top" src="../images/pnr.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Check PNR Status</h5>
+                <p class="card-text">Check your PNR Status</p>
+                <a href="/pnrstatus" class="btn btn-primary">Check PNR</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top" src="../images/availability.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Check Availability</h5>
+                <p class="card-text">Check seats availability.</p>
+                <a href="/checkAvailability" class="btn btn-primary">Check Availability</a>
+            </div>
+        </div>
+    </div>
+    
+    {{> footer}}
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+  <body>
+    {{> navbar}}
+    <div class="registerTrain">
+        <label id="trainNumber" for="trainNumber"><b><i>{{trainNumber}}</i></b></label>
+        <label id="trainName" for="passengerName"><b><i>{{trainName}} {{trainEngine}}</i></b></label>
+        <div class="form-group">
+            <label for="passengerName">Passenger Name</label>
+            <input type="text" class="form-control" id="passengerName" placeholder="Passenger Name">
+        </div>
+        <div class="form-group">
+            <label for="passengerAge">Passenger Age</label>
+            <input type="text" class="form-control" id="passengerAge" placeholder="Passenger Age">
+        </div>
+        <div class="form-group">
+            <label for="passengerPhone">Passenger Mobile Number</label>
+            <input type="text" class="form-control" id="passengerPhone" placeholder="Passenger Phone">
+        </div>
+        <div class="form-group">
+            <label for="seatsAvailable" id="seatsAvailable" value="{{{availableSeats}}}">Available - {{availableSeats}}</label>
+        </div>
+        <button id="bookNow" type="button" class="btn btn-primary">Book Now</button>
+        <div id="bookingFailed" class="hidden alert alert-danger" role="alert">Seats not available.</div>
+    </div>
+    {{> footer}}
+    <script src="../js/custom.js"></script>
+  </body>
+</html>
